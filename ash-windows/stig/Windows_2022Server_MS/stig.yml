@@ -89,6 +89,14 @@
   policy_type: regpol
   value: '4'
   vtype: SZ
+- key: Computer\Software\Policies\Microsoft\Windows\DataCollection\AllowTelemetry
+  policy_type: regpol
+  value: '3'
+  vtype: DWORD
+- key: Computer\SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription\EnableTranscripting
+  policy_type: regpol
+  value: '1'
+  vtype: DWORD
 
 
 - name: SeDenyBatchLogonRight
