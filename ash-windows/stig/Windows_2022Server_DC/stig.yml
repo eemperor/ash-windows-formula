@@ -88,7 +88,7 @@
   vtype: DWORD
 - key: Computer\Software\Policies\Microsoft\Windows\EventLog\Security\MaxSize
   policy_type: regpol
-  value: '196608'
+  value: '5120000'
   vtype: DWORD
 - key: Computer\Software\Policies\Microsoft\Windows\EventLog\System\MaxSize
   policy_type: regpol
@@ -309,58 +309,130 @@
 - name: TicketValidateClient
   policy_type: secedit
   value: '1'
-- key: MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\CachedLogonsCount
+- key: MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters\RefusePasswordChange
   policy_type: regpol
-  value: '4'
-  vtype: SZ
-- key: MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\ScRemoveOption
-  policy_type: regpol
-  value: '1'
-  vtype: SZ
-- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\ConsentPromptBehaviorAdmin
+  value: '0'
+  vtype: DWORD
+- key: MACHINE\System\CurrentControlSet\Services\NTDS\Parameters\LDAPServerIntegrity
   policy_type: regpol
   value: '2'
   vtype: DWORD
-- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\ConsentPromptBehaviorUser
+- key: MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters\SignSecureChannel
+  policy_type: regpol
+  value: '1'
+  vtype: DWORD
+- key: MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters\SealSecureChannel
+  policy_type: regpol
+  value: '1'
+  vtype: DWORD
+- key: MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters\RequireStrongKey
+  policy_type: regpol
+  value: '1'
+  vtype: DWORD
+- key: MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters\RequireSignOrSeal
+  policy_type: regpol
+  value: '1'
+  vtype: DWORD
+- key: MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters\MaximumPasswordAge
+  policy_type: regpol
+  value: '30'
+  vtype: DWORD
+- key: MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters\DisablePasswordChange
   policy_type: regpol
   value: '0'
   vtype: DWORD
-- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\EnableInstallerDetection
+- key: MACHINE\System\CurrentControlSet\Services\LDAP\LDAPClientIntegrity
   policy_type: regpol
   value: '1'
   vtype: DWORD
-- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\EnableLUA
+- key: MACHINE\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\RequireSecuritySignature
   policy_type: regpol
   value: '1'
   vtype: DWORD
-- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\EnableSecureUIAPaths
+- key: MACHINE\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\EnableSecuritySignature
   policy_type: regpol
   value: '1'
   vtype: DWORD
-- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\EnableUIADesktopToggle
+- key: MACHINE\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\EnablePlainTextPassword
   policy_type: regpol
   value: '0'
   vtype: DWORD
-- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\EnableVirtualization
+- key: MACHINE\System\CurrentControlSet\Services\LanManServer\Parameters\RestrictNullSessAccess
   policy_type: regpol
   value: '1'
   vtype: DWORD
-- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\FilterAdministratorToken
+- key: MACHINE\System\CurrentControlSet\Services\LanManServer\Parameters\RequireSecuritySignature
   policy_type: regpol
   value: '1'
   vtype: DWORD
-- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\InactivityTimeoutSecs
+- key: MACHINE\System\CurrentControlSet\Services\LanManServer\Parameters\EnableSecuritySignature
   policy_type: regpol
-  value: '900'
+  value: '1'
   vtype: DWORD
-- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\SupportedEncryptionTypes
+- key: MACHINE\System\CurrentControlSet\Control\Session Manager\ProtectionMode
   policy_type: regpol
-  value: '2147483640'
+  value: '1'
   vtype: DWORD
-- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\LegalNoticeCaption
+- key: MACHINE\System\CurrentControlSet\Control\Lsa\UseMachineId
   policy_type: regpol
-  value: US Department of Defense Warning Statement
+  value: '1'
+  vtype: DWORD
+- key: MACHINE\System\CurrentControlSet\Control\Lsa\SCENoApplyLegacyAuditPolicy
+  policy_type: regpol
+  value: '1'
+  vtype: DWORD
+- key: MACHINE\System\CurrentControlSet\Control\Lsa\RestrictRemoteSAM
+  policy_type: regpol
+  value: O:BAG:BAD:(A;;RC;;;BA)
   vtype: SZ
+- key: MACHINE\System\CurrentControlSet\Control\Lsa\RestrictAnonymousSAM
+  policy_type: regpol
+  value: '1'
+  vtype: DWORD
+- key: MACHINE\System\CurrentControlSet\Control\Lsa\RestrictAnonymous
+  policy_type: regpol
+  value: '1'
+  vtype: DWORD
+- key: MACHINE\System\CurrentControlSet\Control\Lsa\pku2u\AllowOnlineID
+  policy_type: regpol
+  value: '0'
+  vtype: DWORD
+- key: MACHINE\System\CurrentControlSet\Control\Lsa\NoLMHash
+  policy_type: regpol
+  value: '1'
+  vtype: DWORD
+- key: MACHINE\System\CurrentControlSet\Control\Lsa\MSV1_0\NTLMMinServerSec
+  policy_type: regpol
+  value: '537395200'
+  vtype: DWORD
+- key: MACHINE\System\CurrentControlSet\Control\Lsa\MSV1_0\NTLMMinClientSec
+  policy_type: regpol
+  value: '537395200'
+  vtype: DWORD
+- key: MACHINE\System\CurrentControlSet\Control\Lsa\MSV1_0\allownullsessionfallback
+  policy_type: regpol
+  value: '0'
+  vtype: DWORD
+- key: MACHINE\System\CurrentControlSet\Control\Lsa\LmCompatibilityLevel
+  policy_type: regpol
+  value: '5'
+  vtype: DWORD
+- key: MACHINE\System\CurrentControlSet\Control\Lsa\LimitBlankPasswordUse
+  policy_type: regpol
+  value: '1'
+  vtype: DWORD
+- key: MACHINE\System\CurrentControlSet\Control\Lsa\FIPSAlgorithmPolicy\Enabled
+  policy_type: regpol
+  value: '1'
+  vtype: DWORD
+- key: MACHINE\System\CurrentControlSet\Control\Lsa\EveryoneIncludesAnonymous
+  policy_type: regpol
+  value: '0'
+  vtype: DWORD
+- key: MACHINE\Software\Policies\Microsoft\Cryptography\ForceKeyProtection
+  policy_type: regpol
+  value: '2'
+  vtype: DWORD
 - key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\LegalNoticeText
   policy_type: regpol
   value: 'You are accessing a U.S. Government (USG) Information System (IS) that is
@@ -389,130 +461,58 @@
     psychotherapists, or clergy, and their assistants. Such communications and work
     product are private and confidential. See User Agreement for details.'
   vtype: MULTISZ
-- key: MACHINE\Software\Policies\Microsoft\Cryptography\ForceKeyProtection
+- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\LegalNoticeCaption
   policy_type: regpol
-  value: '2'
-  vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Control\Lsa\EveryoneIncludesAnonymous
-  policy_type: regpol
-  value: '0'
-  vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Control\Lsa\FIPSAlgorithmPolicy\Enabled
-  policy_type: regpol
-  value: '1'
-  vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Control\Lsa\LimitBlankPasswordUse
-  policy_type: regpol
-  value: '1'
-  vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Control\Lsa\LmCompatibilityLevel
-  policy_type: regpol
-  value: '5'
-  vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Control\Lsa\MSV1_0\allownullsessionfallback
-  policy_type: regpol
-  value: '0'
-  vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Control\Lsa\MSV1_0\NTLMMinClientSec
-  policy_type: regpol
-  value: '537395200'
-  vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Control\Lsa\MSV1_0\NTLMMinServerSec
-  policy_type: regpol
-  value: '537395200'
-  vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Control\Lsa\NoLMHash
-  policy_type: regpol
-  value: '1'
-  vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Control\Lsa\pku2u\AllowOnlineID
-  policy_type: regpol
-  value: '0'
-  vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Control\Lsa\RestrictAnonymous
-  policy_type: regpol
-  value: '1'
-  vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Control\Lsa\RestrictAnonymousSAM
-  policy_type: regpol
-  value: '1'
-  vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Control\Lsa\RestrictRemoteSAM
-  policy_type: regpol
-  value: O:BAG:BAD:(A;;RC;;;BA)
+  value: US Department of Defense Warning Statement
   vtype: SZ
-- key: MACHINE\System\CurrentControlSet\Control\Lsa\SCENoApplyLegacyAuditPolicy
+- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\SupportedEncryptionTypes
+  policy_type: regpol
+  value: '2147483640'
+  vtype: DWORD
+- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\InactivityTimeoutSecs
+  policy_type: regpol
+  value: '900'
+  vtype: DWORD
+- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\FilterAdministratorToken
   policy_type: regpol
   value: '1'
   vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Control\Lsa\UseMachineId
+- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\EnableVirtualization
   policy_type: regpol
   value: '1'
   vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Control\Session Manager\ProtectionMode
-  policy_type: regpol
-  value: '1'
-  vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Services\LanManServer\Parameters\EnableSecuritySignature
-  policy_type: regpol
-  value: '1'
-  vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Services\LanManServer\Parameters\RequireSecuritySignature
-  policy_type: regpol
-  value: '1'
-  vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Services\LanManServer\Parameters\RestrictNullSessAccess
-  policy_type: regpol
-  value: '1'
-  vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\EnablePlainTextPassword
+- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\EnableUIADesktopToggle
   policy_type: regpol
   value: '0'
   vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\EnableSecuritySignature
+- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\EnableSecureUIAPaths
   policy_type: regpol
   value: '1'
   vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\RequireSecuritySignature
+- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\EnableLUA
   policy_type: regpol
   value: '1'
   vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Services\LDAP\LDAPClientIntegrity
+- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\EnableInstallerDetection
   policy_type: regpol
   value: '1'
   vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters\DisablePasswordChange
+- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\ConsentPromptBehaviorUser
   policy_type: regpol
   value: '0'
   vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters\MaximumPasswordAge
-  policy_type: regpol
-  value: '30'
-  vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters\RequireSignOrSeal
-  policy_type: regpol
-  value: '1'
-  vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters\RequireStrongKey
-  policy_type: regpol
-  value: '1'
-  vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters\SealSecureChannel
-  policy_type: regpol
-  value: '1'
-  vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters\SignSecureChannel
-  policy_type: regpol
-  value: '1'
-  vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Services\NTDS\Parameters\LDAPServerIntegrity
+- key: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\ConsentPromptBehaviorAdmin
   policy_type: regpol
   value: '2'
   vtype: DWORD
-- key: MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters\RefusePasswordChange
+- key: MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\ScRemoveOption
   policy_type: regpol
-  value: '0'
-  vtype: DWORD
+  value: '1'
+  vtype: SZ
+- key: MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\CachedLogonsCount
+  policy_type: regpol
+  value: '4'
+  vtype: SZ
 - name: SeDenyNetworkLogonRight
   policy_type: secedit
   value: '*S-1-5-32-546'
@@ -534,9 +534,15 @@
 - name: SeCreatePagefilePrivilege
   policy_type: secedit
   value: '*S-1-5-32-544'
+- name: SeCreateTokenPrivilege
+  policy_type: secedit
+  value: ''
 - name: SeCreateGlobalPrivilege
   policy_type: secedit
-  value: '*S-1-5-32-544,*S-1-5-19,*S-1-5-20,*S-1-5-6'
+  value: '*S-1-5-6,*S-1-5-20,*S-1-5-19,*S-1-5-32-544'
+- name: SeCreatePermanentPrivilege
+  policy_type: secedit
+  value: ''
 - name: SeCreateSymbolicLinkPrivilege
   policy_type: secedit
   value: '*S-1-5-32-544'
@@ -548,16 +554,19 @@
   value: '*S-1-5-32-544'
 - name: SeAuditPrivilege
   policy_type: secedit
-  value: '*S-1-5-20,*S-1-5-19'
+  value: '*S-1-5-19,*S-1-5-20'
 - name: SeImpersonatePrivilege
   policy_type: secedit
-  value: '*S-1-5-6,*S-1-5-20,*S-1-5-19,*S-1-5-32-544'
+  value: '*S-1-5-32-544,*S-1-5-19,*S-1-5-20,*S-1-5-6'
 - name: SeIncreaseBasePriorityPrivilege
   policy_type: secedit
   value: '*S-1-5-32-544'
 - name: SeLoadDriverPrivilege
   policy_type: secedit
   value: '*S-1-5-32-544'
+- name: SeLockMemoryPrivilege
+  policy_type: secedit
+  value: ''
 - name: SeSecurityPrivilege
   policy_type: secedit
   value: '*S-1-5-32-544'
@@ -578,10 +587,19 @@
   value: '*S-1-5-32-544'
 - name: SeNetworkLogonRight
   policy_type: secedit
-  value: '*S-1-5-32-544,*S-1-5-11,*S-1-5-9'
+  value: '*S-1-5-9,*S-1-5-11,*S-1-5-32-544'
+- name: SeDenyServiceLogonRight
+  policy_type: secedit
+  value: ''
 - name: SeEnableDelegationPrivilege
   policy_type: secedit
   value: '*S-1-5-32-544'
+- name: SeTcbPrivilege
+  policy_type: secedit
+  value: ''
+- name: SeTrustedCredManAccessPrivilege
+  policy_type: secedit
+  value: ''
 - name: SeMachineAccountPrivilege
   policy_type: secedit
   value: '*S-1-5-32-544'
