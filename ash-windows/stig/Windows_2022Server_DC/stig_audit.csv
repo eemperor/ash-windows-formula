@@ -13,8 +13,7 @@ Machine Name,Policy Target,Subcategory,Subcategory GUID,Inclusion Setting,Exclus
 ,System,Audit Logoff,{0cce9216-69ae-11d9-bed3-505054503030},Success,,1
 ,System,Audit Logon,{0cce9215-69ae-11d9-bed3-505054503030},Success and Failure,,3
 ,System,Audit Special Logon,{0cce921b-69ae-11d9-bed3-505054503030},Success,,1
-,System,Audit File System,{0cce921d-69ae-11d9-bed3-505054503030},Success and Failure,,3
-,System,Audit Handle Manipulation,{0cce9223-69ae-11d9-bed3-505054503030},Success and Failure,,3
+,System,Audit Handle Manipulation,{0cce9223-69ae-11d9-bed3-505054503030},Failure,,2
 ,System,Audit Other Object Access Events,{0cce9227-69ae-11d9-bed3-505054503030},Success and Failure,,3
 ,System,Audit Registry,{0cce921e-69ae-11d9-bed3-505054503030},Success and Failure,,3
 ,System,Audit Removable Storage,{0cce9245-69ae-11d9-bed3-505054503030},Success and Failure,,3
