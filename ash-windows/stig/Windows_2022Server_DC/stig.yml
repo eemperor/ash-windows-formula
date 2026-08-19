@@ -88,7 +88,7 @@
   vtype: DWORD
 - key: Computer\Software\Policies\Microsoft\Windows\EventLog\Security\MaxSize
   policy_type: regpol
-  value: '196608'
+  value: '5120000'
   vtype: DWORD
 - key: Computer\Software\Policies\Microsoft\Windows\EventLog\System\MaxSize
   policy_type: regpol
@@ -534,9 +534,15 @@
 - name: SeCreatePagefilePrivilege
   policy_type: secedit
   value: '*S-1-5-32-544'
+- name: SeCreateTokenPrivilege
+  policy_type: secedit
+  value: ''
 - name: SeCreateGlobalPrivilege
   policy_type: secedit
   value: '*S-1-5-32-544,*S-1-5-19,*S-1-5-20,*S-1-5-6'
+- name: SeCreatePermanentPrivilege
+  policy_type: secedit
+  value: ''
 - name: SeCreateSymbolicLinkPrivilege
   policy_type: secedit
   value: '*S-1-5-32-544'
@@ -558,6 +564,9 @@
 - name: SeLoadDriverPrivilege
   policy_type: secedit
   value: '*S-1-5-32-544'
+- name: SeLockMemoryPrivilege
+  policy_type: secedit
+  value: ''
 - name: SeSecurityPrivilege
   policy_type: secedit
   value: '*S-1-5-32-544'
@@ -579,9 +588,18 @@
 - name: SeNetworkLogonRight
   policy_type: secedit
   value: '*S-1-5-32-544,*S-1-5-11,*S-1-5-9'
+- name: SeDenyServiceLogonRight
+  policy_type: secedit
+  value: ''
 - name: SeEnableDelegationPrivilege
   policy_type: secedit
   value: '*S-1-5-32-544'
+- name: SeTcbPrivilege
+  policy_type: secedit
+  value: ''
+- name: SeTrustedCredManAccessPrivilege
+  policy_type: secedit
+  value: ''
 - name: SeMachineAccountPrivilege
   policy_type: secedit
   value: '*S-1-5-32-544'
