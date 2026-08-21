@@ -825,7 +825,7 @@ CERTS = [
         ),
     },
     {
-        'id': 'SV-254444r1081077_rule',
+        'id': 'SV-254444r1081077_rule_1',
         'keys': [
             r'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\Disallowed\Certificates\9B74964506C7ED9138070D08D5F8B969866560C8',
         ],
@@ -877,7 +877,7 @@ CERTS = [
         ),
     },
     {
-        'id': 'SV-254444r1081077_rule',
+        'id': 'SV-254444r1081077_rule_2',
         'keys': [
             r'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\Disallowed\Certificates\D471CA32F7A692CE6CBB6196BD3377FE4DBCD106',
         ],
